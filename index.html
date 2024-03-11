@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>API Demo</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">API Demo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://t.me/rifinannn">Telegram</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/nikita-nikita12308"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <h1 class="mb-4">API Demo</h1>
+
+      <button id="getTokenBtn" class="btn btn-primary mb-4">Get Token</button>
+      <p id="tokenMessage"></p>
+
+      <!-- Add New User Form -->
+      <form id="addUserForm" enctype="multipart/form-data" class="mt-4">
+        <h2>Add New User</h2>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" />
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="tel" class="form-control" id="phone" name="phone" />
+        </div>
+        <div class="mb-3">
+          <label for="position" class="form-label">Position</label>
+          <select class="form-select" id="position" name="position_id">
+            <option value="1">Security</option>
+            <option value="2">Designer</option>
+            <option value="3">Content Manager</option>
+            <option value="4">Lawyer</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="photo" class="form-label">Photo</label>
+          <input
+            type="file"
+            class="form-control"
+            id="photo"
+            name="photo"
+            accept="image/*"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary mb-4"
+          onclick="submitForm()"
+        >
+          Add User
+        </button>
+      </form>
+
+      <p id="errorContainer"></p>
+      <h2>Users List</h2>
+      <!-- User List -->
+      <div id="user-list" class="mb-4">
+        <!-- Display users here -->
+      </div>
+
+      <!-- "Show more" button for pagination -->
+      <button id="showMoreBtn" class="btn btn-secondary mb-4">Show More</button>
+      <button id="resetBtn" class="btn btn-secondary mb-4">Show Less</button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
