@@ -2,7 +2,7 @@ document.getElementById("getTokenBtn").addEventListener("click", async () => {
   try {
     // Make an Axios request to your server to get the token
     const response = await axios.get(
-      "https://abz-test-assignment.onrender.com/api/v1/token"
+      "https://handsome-eel-pantsuit.cyclic.app/api/v1/token"
     );
     const token = response.data.token; // Adjust based on your server response
 
@@ -25,7 +25,7 @@ const usersPerPage = 6;
 async function fetchUsers(page) {
   try {
     const response = await fetch(
-      `https://abz-test-assignment.onrender.com/api/v1/users?page=${page}&count=${usersPerPage}`
+      `https://handsome-eel-pantsuit.cyclic.app/api/v1/users?page=${page}&count=${usersPerPage}`
     );
     const data = await response.json();
 
@@ -71,7 +71,7 @@ async function fetchUsers(page) {
         tmpText.innerText = `registration_timestamp: ${user.registration_timestamp}`;
 
         const userPhoto = document.createElement("img");
-        userPhoto.src = `https://abz-test-assignment.onrender.com/${user.photo}`;
+        userPhoto.src = `https://handsome-eel-pantsuit.cyclic.app/${user.photo}`;
         userPhoto.alt = "User Photo";
         userPhoto.className = "card-img-top mb-2";
         userPhoto.style.maxWidth = "100px";
@@ -144,7 +144,7 @@ async function submitForm() {
 
   try {
     const response = await fetch(
-      "https://abz-test-assignment.onrender.com/api/v1/users",
+      "https://handsome-eel-pantsuit.cyclic.app/api/v1/users",
       {
         method: "POST",
         headers: {
