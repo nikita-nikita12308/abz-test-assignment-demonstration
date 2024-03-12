@@ -71,7 +71,7 @@ async function fetchUsers(page) {
         tmpText.innerText = `registration_timestamp: ${user.registration_timestamp}`;
 
         const userPhoto = document.createElement("img");
-        userPhoto.src = `https://handsome-eel-pantsuit.cyclic.app/${user.photo}`;
+        userPhoto.src = user.photo;
         userPhoto.alt = "User Photo";
         userPhoto.className = "card-img-top mb-2";
         userPhoto.style.maxWidth = "100px";
