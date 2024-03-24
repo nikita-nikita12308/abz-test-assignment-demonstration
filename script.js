@@ -2,7 +2,7 @@ document.getElementById("getTokenBtn").addEventListener("click", async () => {
   try {
     // Make an Axios request to your server to get the token
     const response = await axios.get(
-      "https://handsome-eel-pantsuit.cyclic.app/api/v1/token"
+      "https://simple-rest-api-rho.vercel.app/api/v1/token"
     );
     const token = response.data.token; // Adjust based on your server response
 
@@ -25,7 +25,7 @@ const usersPerPage = 6;
 async function fetchUsers(page) {
   try {
     const response = await fetch(
-      `https://handsome-eel-pantsuit.cyclic.app/api/v1/users?page=${page}&count=${usersPerPage}`
+      `https://simple-rest-api-rho.vercel.app/api/v1/users?page=${page}&count=${usersPerPage}`
     );
     const data = await response.json();
 
@@ -144,7 +144,7 @@ async function submitForm() {
 
   try {
     const response = await fetch(
-      "https://handsome-eel-pantsuit.cyclic.app/api/v1/users",
+      "https://simple-rest-api-rho.vercel.app/api/v1/users",
       {
         method: "POST",
         headers: {
